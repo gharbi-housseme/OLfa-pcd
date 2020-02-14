@@ -1,14 +1,61 @@
 <ion-header>
   <ion-toolbar>
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
     <ion-title>
-      Ionic Blank
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content scroll-y="true">
+    <ion-slides>
+
+        <ion-slide>
+          <img src="./assets/ensi.jpg"/>
+          <h2>Bienvenue dans notre aplication <b>ICA</b></h2>
+          <p>Notre <b>application</b>a pour but de dégitaliser le système de l'absence ou sein de l'ENSI</p>
+        </ion-slide>
+
+        <ion-slide>
+          <img src="./slide-2.png"/>
+          <h2>Comment utiliser cette application?</h2>
+          <p>Vous pouvez suivre ce guide pour savoir comment l'utiliser.</p>
+        </ion-slide>
+
+        <ion-slide>
+          <img src="./slide-3.png"/>
+          <h2>Que faire en cas d'erreur?</h2>
+          <p>Vous pouvez nous contacter.</p>
+        </ion-slide>
+
+        <ion-slide>
+          <img src="./slide-4.png"/>
+          <h2>Ready to Play?</h2>
+          <ion-button fill="clear">Continue <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+        </ion-slide>
+
+      </ion-slides>
 </ion-content>
+
+<ion-tabs>
+ 
+    <ion-tab-bar slot="bottom">
+   
+      <ion-tab-button [routerLink]="['/home']" >
+        <ion-icon name="film"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+   
+      <ion-tab-button [routerLink]="['/classes']" >
+        <ion-icon name="people"></ion-icon>
+        <ion-label>Classes</ion-label>
+      </ion-tab-button>
+      
+      <ion-tab-button [routerLink]="['/actualite']" >
+        <ion-icon name="planet"></ion-icon>
+        <ion-label>Actualités</ion-label>
+      </ion-tab-button>
+   </ion-tab-bar>
+   </ion-tabs>

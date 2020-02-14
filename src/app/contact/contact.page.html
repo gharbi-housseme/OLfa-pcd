@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button color="secondary"></ion-back-button> </ion-buttons>
+    <ion-title>contact</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form onsubmit="processForm(event)">
+        <ion-list lines="full" class="ion-no-margin ion-no-padding">
+          <ion-item>
+            <ion-label position="stacked">Nom <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" oninput="handleFirstNameValue(event)"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Prénom <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" oninput="handleLastNameValue(event)"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label position="stacked">Adresse Email <ion-text color="danger">*</ion-text></ion-label>
+              <ion-input required type="text" oninput="handleEmailValue(event)"></ion-input>
+            </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Sujet</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Message</ion-label>
+            <ion-textarea></ion-textarea>
+          </ion-item>
+        </ion-list>
+
+        <div class="ion-padding">
+          <ion-button [routerLink]="['/home']" expand="block" type="submit" class="ion-no-margin">Envoyer message</ion-button>
+        </div>
+      </form>
+</ion-content>
+<ion-tabs>
+ 
+    <ion-tab-bar slot="bottom">
+   
+      <ion-tab-button [routerLink]="['/home']" >
+        <ion-icon name="film"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+   
+      <ion-tab-button [routerLink]="['/classes']" >
+        <ion-icon name="people"></ion-icon>
+        <ion-label>Classes</ion-label>
+      </ion-tab-button>
+      
+      <ion-tab-button [routerLink]="['/actualite']" >
+        <ion-icon name="planet"></ion-icon>
+        <ion-label>Actualités</ion-label>
+      </ion-tab-button>
+   </ion-tab-bar>
+   </ion-tabs>
+<script>
+  const controller = document.querySelector('ion-alert-controller');
+    let firstName, lastName;
+
+    function processForm(event) {
+      event.preventDefault();
+      controller.create({
+        header: 'Account Created',
+        message: `Created account for: <b>${firstName} ${lastName}</b>`,
+        buttons: [{
+          text: 'OK'
+        }]
+      }).then(alert => alert.present());
+    }
+
+    function handleFirstNameValue(event) {
+      firstName = event.target.value;
+    }
+    function handleEmailValue(event) {
+      Email = event.target.value;
+    }
+
+    function handleLastNameValue(event) {
+      lastName = event.target.value;
+    }
+</script>

@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button color="secondary"></ion-back-button> </ion-buttons>
+    <ion-title>actualite</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <img src="./assets/hackzone.jpg" />
+        <ion-card-header>
+          <ion-card-subtitle>Prochain évènement</ion-card-subtitle>
+          <ion-card-title>Hackeone</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Hackzone est un évènement international organisé par le club sécurité à l'ENSI 
+        </ion-card-content>
+      </ion-card>
+
+      <ion-fab horizontal="start" vertical="bottom" slot="fixed">
+          <ion-fab-button color="dark">
+            <ion-icon name="arrow-dropup"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-list side="top">
+            <ion-fab-button color="light">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button color="light">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button color="light">
+              <ion-icon name="logo-vimeo"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button color="light">
+              <ion-icon name="logo-google"></ion-icon>
+            </ion-fab-button>
+          </ion-fab-list>
+        </ion-fab>
+    
+</ion-content>
+
+<ion-tabs>
+ 
+    <ion-tab-bar slot="bottom">
+   
+      <ion-tab-button [routerLink]="['/home']" >
+        <ion-icon name="film"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+   
+      <ion-tab-button [routerLink]="['/classes']" >
+        <ion-icon name="people"></ion-icon>
+        <ion-label>Classes</ion-label>
+      </ion-tab-button>
+      
+      <ion-tab-button [routerLink]="['/actualite']" >
+        <ion-icon name="planet"></ion-icon>
+        <ion-label>Actualités</ion-label>
+      </ion-tab-button>
+   </ion-tab-bar>
+   </ion-tabs>

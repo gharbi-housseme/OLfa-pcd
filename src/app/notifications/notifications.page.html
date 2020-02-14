@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button color="secondary"></ion-back-button> </ion-buttons>
+    <ion-title>notifications</ion-title>
+  
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content>
+
+<ion-tabs>
+ 
+    <ion-tab-bar slot="bottom">
+   
+      <ion-tab-button [routerLink]="['/home']" >
+        <ion-icon name="film"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+   
+      <ion-tab-button [routerLink]="['/classes']" >
+        <ion-icon name="people"></ion-icon>
+        <ion-label>Classes</ion-label>
+      </ion-tab-button>
+      
+      <ion-tab-button [routerLink]="['/actualite']" >
+        <ion-icon name="planet"></ion-icon>
+        <ion-label>Actualités</ion-label>
+      </ion-tab-button>
+   </ion-tab-bar>
+   </ion-tabs>

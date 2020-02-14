@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button color="secondary"></ion-back-button> </ion-buttons>
+    <ion-title>classes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+    <ion-grid>  
+        <ion-row>  
+          <ion-col size="5">col 1</ion-col>  
+          <ion-col >col 2</ion-col>  
+          <ion-col size="3">col 3</ion-col>  
+        </ion-row>  
+        <ion-row>  
+          <ion-col>col 4</ion-col>  
+          <ion-col>col 5</ion-col>  
+        </ion-row>  
+      </ion-grid>  
+    <ion-list-header color="danger">II1</ion-list-header>
+    <p>
+      <ion-chip color="secondary">
+        <ion-label >II1A</ion-label>
+      </ion-chip>
+      <ion-chip color="secondary">
+          <ion-label>II1B</ion-label>
+      </ion-chip>
+        <ion-chip color="secondary">
+        <ion-label>II1C</ion-label>
+          </ion-chip>
+        <ion-chip color="secondary">
+        <ion-label>II1D</ion-label>
+        </ion-chip>
+        <ion-chip color="secondary">
+        <ion-label>II1E</ion-label>
+        </ion-chip>
+        <ion-chip color="secondary">
+            <ion-label>II1F</ion-label>
+            </ion-chip>
+    </p>
+
+    <ion-list-header color="danger">II2</ion-list-header>
+    <p>
+      <ion-chip color="secondary">
+        <ion-label>II2A</ion-label>
+      </ion-chip>
+      <ion-chip color="secondary">
+          <ion-label>II2B</ion-label>
+      </ion-chip>
+        <ion-chip color="secondary">
+        <ion-label>II2C</ion-label>
+          </ion-chip>
+        <ion-chip color="secondary">
+        <ion-label>II2D</ion-label>
+        </ion-chip>
+        <ion-chip color="secondary">
+        <ion-label>II2E</ion-label>
+        </ion-chip>
+        <ion-chip color="secondary">
+            <ion-label>II2F</ion-label>
+            </ion-chip>
+    </p>
+
+    <ion-list-header color="danger">II3</ion-list-header>
+    <p>
+      <ion-chip color="secondary">
+        <ion-label>ILSI</ion-label>
+      </ion-chip>
+      <ion-chip color="secondary">
+          <ion-label>ILSD</ion-label>
+      </ion-chip>
+        <ion-chip color="secondary">
+        <ion-label>ILSE</ion-label>
+          </ion-chip>
+        <ion-chip color="secondary">
+        <ion-label>RSR</ion-label>
+        </ion-chip>
+        <ion-chip color="secondary">
+        <ion-label>IF</ion-label>
+        </ion-chip>
+        <ion-chip color="secondary">
+            <ion-label>DS</ion-label>
+            </ion-chip>
+    </p>
+
+    <ion-list-header color="danger">Mastère</ion-list-header>
+    <p>
+      <ion-chip  color="secondary">
+        <ion-label>IOT</ion-label>
+      </ion-chip>
+      <ion-chip color="secondary">
+          <ion-label>DS</ion-label>
+      </ion-chip>
+        
+
+
+</ion-content>
+
+<ion-tabs>
+ 
+    <ion-tab-bar slot="bottom">
+   
+      <ion-tab-button [routerLink]="['/home']" >
+        <ion-icon name="film"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+   
+      <ion-tab-button [routerLink]="['/classes']" >
+        <ion-icon name="people"></ion-icon>
+        <ion-label>Classes</ion-label>
+      </ion-tab-button>
+      
+      <ion-tab-button [routerLink]="['/actualite']" >
+        <ion-icon name="planet"></ion-icon>
+        <ion-label>Actualités</ion-label>
+      </ion-tab-button>
+   </ion-tab-bar>
+   </ion-tabs>
